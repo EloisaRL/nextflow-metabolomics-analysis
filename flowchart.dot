@@ -1,0 +1,16 @@
+digraph flowchart {
+
+rankdir=TB;
+
+node [shape=oval];
+
+clean_data;
+normalize_data;
+pca_analysis;
+differential_analysis;
+
+clean_data -> normalize_data;
+normalize_data -> pca_analysis;
+normalize_data -> differential_analysis;
+
+}

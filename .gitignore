@@ -1,0 +1,21 @@
+# Nextflow
+work/
+.nextflow/
+.nextflow.log
+
+# Results (optional - keep or remove depending on size)
+results/*.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# Conda
+.env/
+.conda/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store

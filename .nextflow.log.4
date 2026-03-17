@@ -1,0 +1,88 @@
+Mar-16 18:49:33.325 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume -with-dag flowchart.dot
+Mar-16 18:49:33.500 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Mar-16 18:49:33.542 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/eloisa/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Mar-16 18:49:33.575 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-16 18:49:33.576 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-16 18:49:33.581 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-16 18:49:33.600 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Mar-16 18:49:33.865 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-16 18:49:33.920 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/eloisa/projects/nextflow-metabolomics-analysis/nextflow.config
+Mar-16 18:49:33.928 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/eloisa/projects/nextflow-metabolomics-analysis/nextflow.config
+Mar-16 18:49:33.989 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-16 18:49:34.627 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-16 18:49:34.628 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-16 18:49:34.648 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/eloisa/.nextflow/secrets/store.json
+Mar-16 18:49:34.653 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@348ad293] - activable => nextflow.secret.LocalSecretsProvider@348ad293
+Mar-16 18:49:34.672 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Mar-16 18:49:34.693 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [furious_almeida] DSL2 - revision: 76f2047fb2
+Mar-16 18:49:34.799 [main] DEBUG nextflow.Session - Session UUID: bfe67d2b-0f75-4848-afac-c14a0b8bd960
+Mar-16 18:49:34.800 [main] DEBUG nextflow.Session - Run name: furious_almeida
+Mar-16 18:49:34.800 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-16 18:49:34.817 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-16 18:49:34.829 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Mar-16 18:49:34.861 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC (15:17 BST)
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.18+8-Ubuntu-124.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 25224@DESKTOP-P6AC6HG [127.0.1.1]
+  CPUs: 8 - Mem: 3.7 GB (2.2 GB) - Swap: 1 GB (1021 MB)
+Mar-16 18:49:34.913 [main] DEBUG nextflow.Session - Work-dir: /home/eloisa/projects/nextflow-metabolomics-analysis/work [ext2/ext3]
+Mar-16 18:49:34.959 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-16 18:49:34.973 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Mar-16 18:49:34.976 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Mar-16 18:49:35.059 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-16 18:49:35.076 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Mar-16 18:49:35.229 [main] DEBUG nextflow.Session - Session start
+Mar-16 18:49:35.240 [main] DEBUG nextflow.Session - DAG file already exists: flowchart.dot -- enable `dag.overwrite` in your config file to overwrite existing DAG files
+nextflow.exception.AbortOperationException: DAG file already exists: flowchart.dot -- enable `dag.overwrite` in your config file to overwrite existing DAG files
+	at nextflow.trace.GraphObserver.onFlowCreate(GraphObserver.groovy:75)
+	at nextflow.Session$_notifyFlowCreate_lambda34.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1107)
+	at nextflow.Session.start(Session.groovy:596)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:429)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
+Mar-16 18:49:35.804 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-16 18:49:35.995 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 18:49:35.995 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 18:49:36.011 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-16 18:49:36.021 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=3.7 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-16 18:49:36.026 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-16 18:49:36.079 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'clean_data': maxForks=0; fair=false; array=0
+Mar-16 18:49:36.164 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 18:49:36.164 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 18:49:36.166 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'normalize_data': maxForks=0; fair=false; array=0
+Mar-16 18:49:36.172 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 18:49:36.173 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 18:49:36.175 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'pca_analysis': maxForks=0; fair=false; array=0
+Mar-16 18:49:36.181 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 18:49:36.181 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 18:49:36.182 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'differential_analysis': maxForks=0; fair=false; array=0
+Mar-16 18:49:36.190 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: clean_data, normalize_data, pca_analysis, differential_analysis
+Mar-16 18:49:36.194 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Mar-16 18:49:36.204 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > clean_data
+Mar-16 18:49:36.206 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > normalize_data
+Mar-16 18:49:36.207 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > pca_analysis
+Mar-16 18:49:36.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > differential_analysis
+Mar-16 18:49:36.210 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_b4e0e0deaa4d8797: /home/eloisa/projects/nextflow-metabolomics-analysis/main.nf
+Mar-16 18:49:36.211 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-16 18:49:36.211 [main] DEBUG nextflow.Session - Session await
+Mar-16 18:49:36.403 [Actor Thread 8] DEBUG nextflow.conda.CondaCache - conda found local env for environment=environment.yml; path=/home/eloisa/projects/nextflow-metabolomics-analysis/work/conda/env-99868152119f66e19d5b9d1d259b774b
+Mar-16 18:49:36.573 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [05/66b3cd] Cached process > clean_data (clean metabolite table)
+Mar-16 18:49:36.614 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [fd/5c2442] Cached process > normalize_data (normalise intensities)
+Mar-16 18:49:36.624 [Actor Thread 7] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Mar-16 18:49:36.632 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [48/3e3b35] Cached process > differential_analysis (differential metabolites)
+Mar-16 18:49:36.633 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [8d/18369b] Cached process > pca_analysis (PCA analysis)
+Mar-16 18:49:36.643 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-16 18:49:36.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-16 18:49:36.646 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-16 18:49:36.662 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Mar-16 18:49:36.679 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=4; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=18.5s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-16 18:49:36.719 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-16 18:49:36.745 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Mar-16 18:49:36.747 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

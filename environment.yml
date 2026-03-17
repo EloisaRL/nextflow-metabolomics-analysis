@@ -1,0 +1,9 @@
+name: metabolomics
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - scipy
