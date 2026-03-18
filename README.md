@@ -80,7 +80,3 @@ pca.png – PCA plot of samples
 
 differential_metabolites.csv – statistical results
 
----
-
-## 📈 Example Results
-PCA Plot
